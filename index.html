@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ER-Architect - Database Modeling</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reactflow@11.11.4/dist/style.css" crossorigin="anonymous" />
+    <script>
+      tailwind.config = {
+        darkMode: 'class',
+        theme: {
+          extend: {
+            colors: {
+              background: '#0f172a', // slate-900
+              surface: '#1e293b', // slate-800
+              primary: '#3b82f6', // blue-500
+              secondary: '#64748b', // slate-500
+              border: '#334155', // slate-700
+            }
+          }
+        }
+      }
+    </script>
+    <style>
+      /* React Flow Customization */
+      .react-flow__edge-path {
+        stroke: #64748b;
+        stroke-width: 2;
+        transition: stroke 0.3s ease, stroke-width 0.3s ease, filter 0.3s ease;
+        cursor: pointer; /* Indicate clickable */
+      }
+      
+      /* Combine logic for Hover Highlight (custom class) and Selection (built-in class) */
+      .react-flow__edge.highlighted .react-flow__edge-path,
+      .react-flow__edge.selected .react-flow__edge-path {
+        stroke: #3b82f6;
+        stroke-width: 4;
+        filter: drop-shadow(0 0 4px rgba(59, 130, 246, 0.6));
+      }
+
+      .react-flow__edge.dimmed .react-flow__edge-path {
+        opacity: 0.2;
+      }
+      
+      /* Edge Label Styling */
+      .react-flow__edge-text {
+        fill: #94a3b8;
+        font-weight: 700;
+        font-size: 12px;
+      }
+      .react-flow__edge.selected .react-flow__edge-text {
+        fill: #3b82f6;
+      }
+      
+      .react-flow__connection-path {
+        stroke: #3b82f6;
+        stroke-width: 2;
+      }
+      .react-flow__handle {
+        width: 8px;
+        height: 8px;
+        background: #64748b;
+        border: 1px solid #0f172a;
+      }
+      .react-flow__handle-connecting {
+        background: #3b82f6;
+      }
+      .react-flow__minimap {
+        background: #1e293b;
+        border-radius: 8px;
+      }
+      .react-flow__controls button {
+        background: #1e293b;
+        color: #e2e8f0;
+        border-bottom: 1px solid #334155;
+      }
+      .react-flow__controls button:hover {
+        background: #334155;
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+    "lucide-react": "https://aistudiocdn.com/lucide-react@^0.555.0",
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "tailwind-merge": "https://aistudiocdn.com/tailwind-merge@^3.4.0",
+    "clsx": "https://aistudiocdn.com/clsx@^2.1.1",
+    "reactflow/": "https://aistudiocdn.com/reactflow@^11.11.4/",
+    "reactflow": "https://aistudiocdn.com/reactflow@^11.11.4",
+    "dagre": "https://aistudiocdn.com/dagre@^0.8.5",
+    "html-to-image": "https://esm.sh/html-to-image@1.11.11",
+    "@google/genai": "https://aistudiocdn.com/@google/genai@^1.30.0"
+  }
+}
+</script>
+</head>
+  <body class="bg-background text-slate-200 overflow-hidden">
+    <div id="root"></div>
+  </body>
+</html>

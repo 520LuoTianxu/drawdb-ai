@@ -1,0 +1,5 @@
+{
+  "name": " ER-Architect",
+  "description": "A professional Entity-Relationship Diagram management platform with SQL DDL import/export, auto-layout, and visual modeling capabilities.",
+  "requestFramePermissions": []
+}
